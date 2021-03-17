@@ -1,8 +1,8 @@
 const { Octokit } = require("@octokit/rest")
+const { env } = require("process")
 const createChangeLog = require("auto-changelog/src/run").run
 
-
-const octokit = new Octokit({ auth: `d1a3bd42df5adbbfb6fc3c8767a092f22dbb18e0` })
+const octokit = new Octokit({ auth: env.GITHUB_TOKEN })
 
 async function script() {
     // Compare: https://docs.github.com/en/rest/reference/repos/#list-organization-repositories

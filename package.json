@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node -r dotenv/config ."
   },
   "author": "",
   "license": "ISC",
@@ -12,5 +12,8 @@
     "@octokit/core": "^3.3.1",
     "@octokit/rest": "^18.3.5",
     "auto-changelog": "^2.2.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
